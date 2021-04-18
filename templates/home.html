@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{%  block title %}
+<title>Главная страница</title>
+{% endblock%}
+
+
+{%  block h %}
+  {%for i in data%}
+<div class="container">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">{{i.title}}</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="text fw-light">{{i.prize}}<small class="text-muted fw-light">/руб</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li class="text fw-light">{{i.text}}</li>
+                <br>
+                <li class="text fw-light">дата создания: {{i.data}}</li>
+            </ul>
+            <a href="/shop/{{i.id}}" class="w-100 btn btn-lg btn-primary ">Купить товар</a>
+          </div>
+        </div>
+      </div>
+  {%endfor%}
+{% endblock%}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>chat</title>
+</head>
+<body>
+<form method="POST">
+    <input type="text" name="textt" id="textt" placeholder="введите текст">
+    <button type="submit"></button>
+    {% for i in data %}
+    <h1>{{i.text}}</h1><br>
+    {% endfor %}
+</form>
+</body>
+</html>
